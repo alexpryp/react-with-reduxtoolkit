@@ -1,10 +1,14 @@
 import { getImageUrl } from "@/helpers/utils";
+import { TAvatarProps, TCardProps } from "@/types/common";
 
-function Avatar({ person, size }) {
+function Avatar({ 
+  person,
+  size 
+}: TAvatarProps) {
   return (
     <img
       className="avatar"
-      src={getImageUrl(person)}
+      src={getImageUrl(person, size)}
       alt={person.name}
       width={size}
       height={size}
@@ -12,7 +16,7 @@ function Avatar({ person, size }) {
   );
 }
 
-function Card({ children }) {
+function Card({ children }: TCardProps) {
   return (
     <div className="card">
       {children}

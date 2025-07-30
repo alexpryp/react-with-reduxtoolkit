@@ -1,0 +1,12 @@
+.circleImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.scientistCard {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}

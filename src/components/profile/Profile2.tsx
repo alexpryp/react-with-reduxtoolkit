@@ -1,5 +1,6 @@
 import { getImageUrl } from "@/helpers/utils";
 import { TAvatarProps, TCardProps } from "@/types/common";
+import '@/components/profile/Profile2.css';
 
 function Avatar({ 
   person,

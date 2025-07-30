@@ -6,6 +6,7 @@ import Gallery from '@/components/gallery/Gallery'
 import TodoList from '@/components/todolist/TodoList'
 import TodoListGregorio from '@/components/todolist/TodoListGregorio'
 import Profile2 from '@/components/profile/Profile2'
+import PackingList from '@/components/checkList/CheckList'
 import Counter from './features/counter/Counter'
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="react-tutorial">
+        <PackingList />
         <Profile2 />
         <TodoListGregorio />
         <TodoList />

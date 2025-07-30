@@ -1,3 +1,5 @@
+import '@/components/todolist/TodoListGregorio.css';
+
 const person = {
   name: 'Gregorio Y. Zara',
   theme: {
@@ -11,7 +13,7 @@ export default function TodoListGregorio() {
     <div style={person.theme}>
       <h1>{person.name}'s Todos</h1>
       <img 
-        className="avatar"
+        className="avatarTodo"
         src="https://i.imgur.com/7vQD0fPs.jpg"
         alt="Gregorio Y. Zara"
       />

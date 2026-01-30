@@ -7,6 +7,7 @@ import TodoList from '@/components/todolist/TodoList'
 import TodoListGregorio from '@/components/todolist/TodoListGregorio'
 import Profile2 from '@/components/profile/Profile2'
 import Form from '@/components/profile/Form'
+import Form2 from '@/components/profile/Form2'
 import PackingList from '@/components/checkList/CheckList'
 import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
@@ -24,6 +25,7 @@ function App() {
         <TodoList />
         <Gallery />
         <Form />
+        <Form2 />
       </div>
 
       <div>

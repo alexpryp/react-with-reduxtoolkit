@@ -3,18 +3,15 @@ import { useState } from 'react';
 export default function Form2() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [fullName, setFullName] = useState('');
 
   function handleFirstNameChange(e) {
     e.preventDefault();
     setFirstName(e.target.value);
-    setFullName(e.target.value + ' ' + lastName);
   }
 
   function handleLastNameChange(e) {
     e.preventDefault();
     setLastName(e.target.value);
-    setFullName(firstName + ' ' + e.target.value);
   }
 
   return (
@@ -40,7 +37,7 @@ export default function Form2() {
         />
       </label>
       <p>
-        Your ticket will be issued to: <b>{fullName}</b>
+        Your ticket will be issued to: <b>{firstName + ' ' + lastName}</b>
       </p>
       <hr />
     </>

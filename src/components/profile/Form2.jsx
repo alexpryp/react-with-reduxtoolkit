@@ -16,7 +16,6 @@ export default function Form2() {
 
   return (
     <>
-      <hr />
       <h2>Let's check you in</h2>
       <label>
         First name:{' '}

@@ -9,7 +9,7 @@ function Avatar({
   return (
     <img
       className="avatar"
-      src={getImageUrl(person, size)}
+      src={getImageUrl(person)}
       alt={person.name}
       width={size}
       height={size}

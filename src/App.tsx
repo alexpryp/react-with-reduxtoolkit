@@ -6,7 +6,11 @@ import Gallery from '@/components/gallery/Gallery'
 import TodoList from '@/components/todolist/TodoList'
 import TodoListGregorio from '@/components/todolist/TodoListGregorio'
 import Profile2 from '@/components/profile/Profile2'
+import Form from '@/components/profile/Form'
+import Form2 from '@/components/profile/Form2'
+import Accordion from '@/components/profile/Accordion'
 import PackingList from '@/components/checkList/CheckList'
+import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
 
 function App() {
@@ -15,11 +19,15 @@ function App() {
   return (
     <>
       <div className="react-tutorial">
+        <RenderList />
         <PackingList />
         <Profile2 />
         <TodoListGregorio />
         <TodoList />
         <Gallery />
+        <Form />
+        <Form2 />
+        <Accordion />
       </div>
 
       <div>

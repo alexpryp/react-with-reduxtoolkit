@@ -9,6 +9,7 @@ import Profile2 from '@/components/profile/Profile2'
 import Form from '@/components/profile/Form'
 import Form2 from '@/components/profile/Form2'
 import Accordion from '@/components/profile/Accordion'
+import Messenger from '@/components/profile/messenger/Messenger'
 import PackingList from '@/components/checkList/CheckList'
 import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
@@ -28,6 +29,7 @@ function App() {
         <Form />
         <Form2 />
         <Accordion />
+        <Messenger />
       </div>
 
       <div>

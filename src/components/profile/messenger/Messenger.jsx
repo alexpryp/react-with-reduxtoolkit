@@ -6,14 +6,16 @@ export default function Messenger() {
   const [to, setTo] = useState(contacts[0]);
 
   return (
-    <div style={{display: 'flex'}}>
-      <ContactList 
-        contacts={contacts}
-        selectedContact={to}
-        onSelect={contact => setTo(contact)}
-      />
-      <Chat contact={to}/>
-      <br />
+    <div>
+      <div style={{display: 'flex'}}>
+        <ContactList 
+          contacts={contacts}
+          selectedContact={to}
+          onSelect={contact => setTo(contact)}
+        />
+        <Chat key={to.email} contact={to}/>
+        <br />
+      </div>
       <hr />
     </div>
   );

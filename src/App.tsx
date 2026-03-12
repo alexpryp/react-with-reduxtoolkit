@@ -11,6 +11,7 @@ import Form2 from '@/components/profile/Form2'
 import Accordion from '@/components/profile/Accordion'
 import Messenger from '@/components/profile/messenger/Messenger'
 import ReducerLesson from '@/components/profile/reducerLesson/ReducerLesson'
+import FormImperative from '@/components/profile/formImperative/FormImperative'
 import PackingList from '@/components/checkList/CheckList'
 import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
@@ -32,6 +33,7 @@ function App() {
         <Accordion />
         <Messenger />
         <ReducerLesson />
+        <FormImperative />
       </div>
 
       <div>

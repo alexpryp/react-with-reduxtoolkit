@@ -13,6 +13,8 @@ import Messenger from '@/components/profile/messenger/Messenger'
 import ReducerLesson from '@/components/profile/reducerLesson/ReducerLesson'
 import FormImperative from '@/components/profile/formImperative/FormImperative'
 import FormDeclarative from '@/components/profile/formDeclarative/FormDeclarative'
+import FeedbackForm from '@/components/profile/feedbackForm/FeedbackForm'
+import CheckInForm from '@/components/profile/checkInForm/CheckInForm'
 import PackingList from '@/components/checkList/CheckList'
 import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
@@ -36,6 +38,8 @@ function App() {
         <ReducerLesson />
         <FormImperative />
         <FormDeclarative />
+        <FeedbackForm />
+        <CheckInForm />
       </div>
 
       <div>

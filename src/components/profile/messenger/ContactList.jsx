@@ -5,9 +5,12 @@ export default function ContactList({
 }) {
   return (
     <section className="contact-list">
-      <ul>
+      <ul style={{padding: '0px'}}>
         {contacts.map(contact => 
-          <li key={contact.email}>
+          <li
+            key={contact.email}
+            style={{listStyleType: 'none', margin: '5px 0px'}}
+          >
             <button onClick={() => {
               onSelect(contact);
             }}>

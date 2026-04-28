@@ -15,6 +15,7 @@ import FormImperative from '@/components/profile/formImperative/FormImperative'
 import FormDeclarative from '@/components/profile/formDeclarative/FormDeclarative'
 import FeedbackForm from '@/components/profile/feedbackForm/FeedbackForm'
 import CheckInForm from '@/components/profile/checkInForm/CheckInForm'
+import TravelSnackMenu from '@/components/profile/travelSnackMenu/travelSnackMenu'
 import PackingList from '@/components/checkList/CheckList'
 import RenderList from '@/components/renderList/RenderList'
 import Counter from './features/counter/Counter'
@@ -40,6 +41,7 @@ function App() {
         <FormDeclarative />
         <FeedbackForm />
         <CheckInForm />
+        <TravelSnackMenu />
       </div>
 
       <div>

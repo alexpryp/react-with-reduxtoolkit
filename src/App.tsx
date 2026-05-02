@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Gallery from '@/components/gallery/Gallery'
-import TodoList from '@/components/todolist/TodoList'
-import TodoListGregorio from '@/components/todolist/TodoListGregorio'
-import Profile2 from '@/components/profile/Profile2'
-import Form from '@/components/profile/Form'
-import Form2 from '@/components/profile/Form2'
-import Accordion from '@/components/profile/Accordion'
-import Messenger from '@/components/profile/messenger/Messenger'
-import ReducerLesson from '@/components/profile/reducerLesson/ReducerLesson'
-import FormImperative from '@/components/profile/formImperative/FormImperative'
-import FormDeclarative from '@/components/profile/formDeclarative/FormDeclarative'
-import FeedbackForm from '@/components/profile/feedbackForm/FeedbackForm'
-import CheckInForm from '@/components/profile/checkInForm/CheckInForm'
-import TravelSnackMenu from '@/components/profile/travelSnackMenu/travelSnackMenu'
-import PackingList from '@/components/checkList/CheckList'
-import RenderList from '@/components/renderList/RenderList'
-import Counter from './features/counter/Counter'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Gallery from "@/components/gallery/Gallery";
+import TodoList from "@/components/todolist/TodoList";
+import TodoListGregorio from "@/components/todolist/TodoListGregorio";
+import Profile2 from "@/components/profile/Profile2";
+import Form from "@/components/profile/Form";
+import Form2 from "@/components/profile/Form2";
+import Accordion from "@/components/profile/Accordion";
+import Messenger from "@/components/profile/messenger/Messenger";
+import ReducerLesson from "@/components/profile/reducerLesson/ReducerLesson";
+import FormImperative from "@/components/profile/formImperative/FormImperative";
+import FormDeclarative from "@/components/profile/formDeclarative/FormDeclarative";
+import FeedbackForm from "@/components/profile/feedbackForm/FeedbackForm";
+import CheckInForm from "@/components/profile/checkInForm/CheckInForm";
+import TravelSnackMenu from "@/components/profile/travelSnackMenu/TravelSnackMenu";
+import TravelPlan from "@/components/profile/travelPlan/TravelPlan";
+import CheckList from "@/components/checkList/CheckList";
+import RenderList from "@/components/renderList/RenderList";
+import Counter from "./features/counter/Counter";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <div className="react-tutorial">
         <RenderList />
-        <PackingList />
+        <CheckList />
         <Profile2 />
         <TodoListGregorio />
         <TodoList />
@@ -42,6 +43,7 @@ function App() {
         <FeedbackForm />
         <CheckInForm />
         <TravelSnackMenu />
+        <TravelPlan />
       </div>
 
       <div>
@@ -66,7 +68,7 @@ function App() {
       </p>
       <Counter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

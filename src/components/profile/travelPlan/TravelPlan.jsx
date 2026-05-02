@@ -46,7 +46,16 @@ export default function TravelPlan() {
 
   function handleDeleteItem(itemId) {
     setTotal(total - 1);
-    setItems(items.filter((item) => item.id !== itemId));
+    setItems(
+      items.filter((item) => {
+        if (item.id === itemId) {
+          if (item.packed) {
+            setPacked((packed) => packed - 1);
+          }
+        }
+        return item.id !== itemId;
+      }),
+    );
   }
 
   return (
@@ -58,6 +67,10 @@ export default function TravelPlan() {
         onChangeItem={handleChangeItem}
         onDeleteItem={handleDeleteItem}
       />
+      <hr />
+      <b>
+        {packed} out of {total} packed!
+      </b>
     </>
   );
 }

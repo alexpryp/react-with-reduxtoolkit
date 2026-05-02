@@ -16,7 +16,7 @@ export default function PackingList({ items, onChangeItem, onDeleteItem }) {
             />{" "}
             {item.title}
           </label>
-          <button onCLick={() => onDeleteItem(item.id)}>Delete</button>
+          <button onClick={() => onDeleteItem(item.id)}>Delete</button>
         </li>
       ))}
     </ul>

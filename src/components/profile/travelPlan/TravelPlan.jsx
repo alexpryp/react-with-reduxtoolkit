@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddItem from "@/components/profile/travelPlan/AddItem";
+import PackingList from "@/components/profile/travelPlan/PackingList";
 
 let nextId = 3;
 
@@ -26,11 +27,37 @@ export default function TravelPlan() {
     ]);
   }
 
+  function handleChangeItem(nextItem) {
+    if (nextItem.packed) {
+      setPacked(packed + 1);
+    } else {
+      setPacked(packed - 1);
+    }
+    setItems(
+      items.map((item) => {
+        if (item.id === nextItem.id) {
+          return nextItem;
+        } else {
+          return item;
+        }
+      }),
+    );
+  }
+
+  function handleDeleteItem(itemId) {
+    setTotal(total - 1);
+    setItems(items.filter((item) => item.id !== itemId));
+  }
+
   return (
     <>
       <hr />
       <AddItem onAddItem={handleAddItem} />
-      <h2>Packing List</h2>
+      <PackingList
+        items={items}
+        onChangeItem={handleChangeItem}
+        onDeleteItem={handleDeleteItem}
+      />
     </>
   );
 }

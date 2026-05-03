@@ -17,6 +17,7 @@ import FeedbackForm from "@/components/profile/feedbackForm/FeedbackForm";
 import CheckInForm from "@/components/profile/checkInForm/CheckInForm";
 import TravelSnackMenu from "@/components/profile/travelSnackMenu/TravelSnackMenu";
 import TravelPlan from "@/components/profile/travelPlan/TravelPlan";
+import HighlightedLetters from "@/components/profile/highlightedLetters/HighlightedLetters";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -44,6 +45,7 @@ function App() {
         <CheckInForm />
         <TravelSnackMenu />
         <TravelPlan />
+        <HighlightedLetters />
       </div>
 
       <div>

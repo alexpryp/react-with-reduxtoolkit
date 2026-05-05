@@ -7,8 +7,8 @@ export default function HighlightedLetter() {
   const [letters, setLetters] = useState(initialLetters);
   const [highlightedLetter, setHighlightedLetter] = useState(null);
 
-  function handleHover(letter) {
-    setHighlightedLetter(letter);
+  function handleHover(letterId) {
+    setHighlightedLetter(letterId);
   }
 
   function handleStar(starred) {
@@ -35,7 +35,7 @@ export default function HighlightedLetter() {
           <Letter
             key={letter.id}
             letter={letter}
-            isHighlighted={letter === highlightedLetter}
+            isHighlighted={letter.id === highlightedLetter}
             onHover={handleHover}
             onToggleStar={handleStar}
           />

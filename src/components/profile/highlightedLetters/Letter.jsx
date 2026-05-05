@@ -8,10 +8,10 @@ export default function Letter({
     <li
       className={isHighlighted ? "highlighted" : ""}
       onFocus={() => {
-        onHover(letter);
+        onHover(letter.id);
       }}
       onPointerMove={() => {
-        onHover(letter);
+        onHover(letter.id);
       }}
     >
       <button

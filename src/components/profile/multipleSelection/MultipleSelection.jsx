@@ -5,12 +5,16 @@ import Letter from "@/components/profile/multipleSelection/Letter";
 import "./styles.css";
 
 export default function MultipleSelection() {
-  const [selectedId, setSelectedId] = useState(null);
-
-  const selectedCount = 1;
+  const [selectedId, setSelectedId] = useState([0]);
 
   function handleToggle(toggledId) {
-    setSelectedId(toggledId);
+    setSelectedId((selectedId) => {
+      if (selectedId.includes(toggledId)) {
+        return selectedId.filter((id) => id !== toggledId);
+      }
+
+      return [...selectedId, toggledId];
+    });
   }
 
   return (
@@ -22,13 +26,13 @@ export default function MultipleSelection() {
           <Letter
             key={letter.id}
             letter={letter}
-            isSelected={letter.id === selectedId}
+            isSelected={selectedId.includes(letter.id)}
             onToggle={handleToggle}
           />
         ))}
         <hr />
         <p>
-          <b>You selected {selectedCount} letters</b>
+          <b>You selected {selectedId.length} letters</b>
         </p>
       </ul>
     </>

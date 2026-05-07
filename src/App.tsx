@@ -20,6 +20,7 @@ import TravelPlan from "@/components/profile/travelPlan/TravelPlan";
 import HighlightedLetters from "@/components/profile/highlightedLetters/HighlightedLetters";
 import MultipleSelection from "@/components/profile/multipleSelection/MultipleSelection";
 import DisappearingInputText from "@/components/profile/disappearingInputText/DisappearingInputText";
+import SwapFormFields from "@/components/profile/swapFormFields/SwapFormFields";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -50,6 +51,7 @@ function App() {
         <HighlightedLetters />
         <MultipleSelection />
         <DisappearingInputText />
+        <SwapFormFields />
       </div>
 
       <div>

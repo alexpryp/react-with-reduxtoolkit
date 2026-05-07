@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function SwapFormFields() {
   const [reverse, setReverse] = useState(false);
+
   const checkbox = (
     <label>
       <input
@@ -12,12 +13,13 @@ export default function SwapFormFields() {
       Reverse order
     </label>
   );
+
   if (reverse) {
     return (
       <>
         <hr />
-        <Field label="Last name" />
-        <Field label="First name" />
+        <Field key="Last name" label="Last name" />
+        <Field key="First name" label="First name" />
         {checkbox}
       </>
     );
@@ -25,8 +27,8 @@ export default function SwapFormFields() {
     return (
       <>
         <hr />
-        <Field label="First name" />
-        <Field label="Last name" />
+        <Field key="First name" label="First name" />
+        <Field key="Last name" label="Last name" />
         {checkbox}
       </>
     );

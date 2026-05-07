@@ -2,36 +2,24 @@ import { useState } from "react";
 
 export default function DisappearingInputText() {
   const [showHint, setShowHint] = useState(false);
-  if (showHint) {
-    return (
-      <div>
-        <p>
-          <i>Hint: Your favorite city?</i>
-        </p>
-        <Form />
-        <br />
-        <button
-          onClick={() => {
-            setShowHint(false);
-          }}
-        >
-          Hide hint
-        </button>
-      </div>
-    );
-  }
+
   return (
     <>
       <hr />
       <div>
+        {showHint && (
+          <p>
+            <i>Hint: Your favorite city?</i>
+          </p>
+        )}
         <Form />
         <br />
         <button
           onClick={() => {
-            setShowHint(true);
+            setShowHint((showHint) => !showHint);
           }}
         >
-          Show hint
+          {showHint ? "Hide hint" : "Show hint"}
         </button>
       </div>
     </>

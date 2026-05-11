@@ -19,6 +19,9 @@ import TravelSnackMenu from "@/components/profile/travelSnackMenu/TravelSnackMen
 import TravelPlan from "@/components/profile/travelPlan/TravelPlan";
 import HighlightedLetters from "@/components/profile/highlightedLetters/HighlightedLetters";
 import MultipleSelection from "@/components/profile/multipleSelection/MultipleSelection";
+import DisappearingInputText from "@/components/profile/disappearingInputText/DisappearingInputText";
+import SwapFormFields from "@/components/profile/swapFormFields/SwapFormFields";
+import ResetDetailForm from "@/components/profile/resetDetailForm/ResetDetailForm";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -48,6 +51,9 @@ function App() {
         <TravelPlan />
         <HighlightedLetters />
         <MultipleSelection />
+        <DisappearingInputText />
+        <SwapFormFields />
+        <ResetDetailForm />
       </div>
 
       <div>

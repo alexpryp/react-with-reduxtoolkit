@@ -23,7 +23,7 @@ export default function EditContact({ initialData, onSave }) {
         />
       </label>
       <button
-        onCLick={() => {
+        onClick={() => {
           const updatedData = {
             id: initialData.id,
             name: name,

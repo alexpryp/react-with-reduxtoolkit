@@ -10,7 +10,7 @@ export default function ResetDetailForm() {
 
   function handleSave(updatedDate) {
     const nextContacts = contacts.map((c) => {
-      if (c.id === updated.id) {
+      if (c.id === updatedDate.id) {
         return updatedDate;
       } else {
         return c;
@@ -23,14 +23,17 @@ export default function ResetDetailForm() {
     <>
       <hr />
       <div style={{ border: "1px solid #ffffff", padding: "10px" }}>
-        HELLO!
         <ContactList
           contacts={contacts}
           selectedId={selectedId}
           onSelect={(id) => setSelectedId(id)}
         />
         <hr />
-        <EditContact initialData={selectedContact} onSave={handleSave} />
+        <EditContact
+          key={selectedId}
+          initialData={selectedContact}
+          onSave={handleSave}
+        />
       </div>
     </>
   );

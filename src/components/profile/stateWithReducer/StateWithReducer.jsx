@@ -15,6 +15,18 @@ export default function StateWithReducer() {
     ]);
   }
 
+  function handleChangeTask(task) {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      }),
+    );
+  }
+
   return (
     <>
       <hr />

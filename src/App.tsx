@@ -22,6 +22,7 @@ import MultipleSelection from "@/components/profile/multipleSelection/MultipleSe
 import DisappearingInputText from "@/components/profile/disappearingInputText/DisappearingInputText";
 import SwapFormFields from "@/components/profile/swapFormFields/SwapFormFields";
 import ResetDetailForm from "@/components/profile/resetDetailForm/ResetDetailForm";
+import StateWithReducer from "@/components/profile/stateWithReducer/StateWithReducer";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -54,6 +55,7 @@ function App() {
         <DisappearingInputText />
         <SwapFormFields />
         <ResetDetailForm />
+        <StateWithReducer />
       </div>
 
       <div>

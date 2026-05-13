@@ -1,11 +1,11 @@
 export default function ContactList({ contacts, selectedId, onSelect }) {
   return (
     <section>
-      <ul style={{ "list-style-type": "none" }}>
+      <ul style={{ listStyleType: "none" }}>
         {contacts.map((contact) => (
           <li key={contact.id} style={{ display: "inline-block" }}>
             <button
-              onCLick={() => {
+              onClick={() => {
                 onSelect(contact.id);
               }}
             >

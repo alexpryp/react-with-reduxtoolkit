@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddTask from "@/components/profile/stateWithReducer/AddTask";
+import TaskList from "@/components/profile/stateWithReducer/TaskList";
 
 export default function StateWithReducer() {
   const [tasks, setTasks] = useState(initialTasks);
@@ -27,11 +28,20 @@ export default function StateWithReducer() {
     );
   }
 
+  function handleDeleteTask(taskId) {
+    setTasks(tasks.filter((t) => t.id !== taskId));
+  }
+
   return (
     <>
       <hr />
       <h1>Prague itinerary</h1>
       <AddTask onAddTask={handleAddTask} />
+      <TaskList
+        tasks={tasks}
+        onChangeTask={handleChangeTask}
+        onDeleteTask={handleDeleteTask}
+      />
     </>
   );
 }

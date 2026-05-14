@@ -11,7 +11,7 @@ export default function AddTask({ onAddTask }) {
         onChange={(e) => setText(e.target.value)}
       />
       <button
-        onClick={() => {
+        onClick={(e) => {
           e.stopPropagation();
           setText("");
           onAddTask(text);

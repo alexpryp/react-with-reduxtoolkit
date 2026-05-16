@@ -23,6 +23,7 @@ import DisappearingInputText from "@/components/profile/disappearingInputText/Di
 import SwapFormFields from "@/components/profile/swapFormFields/SwapFormFields";
 import ResetDetailForm from "@/components/profile/resetDetailForm/ResetDetailForm";
 import StateWithReducer from "@/components/profile/stateWithReducer/StateWithReducer";
+import ReducerWithImmer from "@/components/profile/reducerWithImmer/ReducerWithImmer";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -56,6 +57,7 @@ function App() {
         <SwapFormFields />
         <ResetDetailForm />
         <StateWithReducer />
+        <ReducerWithImmer />
       </div>
 
       <div>

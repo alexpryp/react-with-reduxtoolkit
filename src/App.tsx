@@ -24,6 +24,7 @@ import SwapFormFields from "@/components/profile/swapFormFields/SwapFormFields";
 import ResetDetailForm from "@/components/profile/resetDetailForm/ResetDetailForm";
 import StateWithReducer from "@/components/profile/stateWithReducer/StateWithReducer";
 import ReducerWithImmer from "@/components/profile/reducerWithImmer/ReducerWithImmer";
+import DispatchActionsFromHandlers from "@/components/profile/dispatchActionsFromHandlers/DispatchActionsFromHandlers";
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
@@ -58,6 +59,7 @@ function App() {
         <ResetDetailForm />
         <StateWithReducer />
         <ReducerWithImmer />
+        <DispatchActionsFromHandlers />
       </div>
 
       <div>

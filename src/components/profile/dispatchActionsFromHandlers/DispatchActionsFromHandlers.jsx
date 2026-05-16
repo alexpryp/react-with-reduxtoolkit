@@ -1,0 +1,40 @@
+import { useReducer } from "react";
+
+import ContactList from "@/components/profile/dispatchActionsFromHandlers/ContactList";
+import Chat from "@/components/profile/dispatchActionsFromHandlers/Chat";
+import {
+  initialState,
+  messengerReducer,
+} from "@/components/profile/dispatchActionsFromHandlers/messengerReducer";
+
+export default function DispatchActionsFromHandlers() {
+  const [state, dispatch] = useReducer(messengerReducer, initialState);
+
+  const message = state.message;
+  const contact = contacts.find((c) => c.id === state.selectedId);
+
+  return (
+    <>
+      <hr />
+      <div>
+        <ContactList
+          contacts={contacts}
+          selectedId={state.selectedId}
+          dispatch={dispatch}
+        />
+        <Chat
+          key={contact.id}
+          message={message}
+          contact={contact}
+          dispatch={dispatch}
+        />
+      </div>
+    </>
+  );
+}
+
+const contacts = [
+  { id: 0, name: "Taylor", email: "taylor@mail.com" },
+  { id: 1, name: "Alice", email: "alice@mail.com" },
+  { id: 2, name: "Bob", email: "bob@mail.com" },
+];

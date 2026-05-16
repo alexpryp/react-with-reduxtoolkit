@@ -31,7 +31,7 @@ export default function ReducerWithImmer() {
   return (
     <>
       <hr />
-      <h1>Prague itinerary</h1>
+      <h2>Prague itinerary</h2>
       <AddTask onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}

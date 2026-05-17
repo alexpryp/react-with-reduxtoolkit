@@ -12,7 +12,19 @@ export default function Chat({ contact, message, dispatch }) {
         }}
       />
       <br />
-      <button>Send to {contact.email}</button>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          alert(`Message to ${contact.email}: ${message}`);
+          dispatch({
+            type: "edited_message",
+            message: "",
+          });
+        }}
+      >
+        Send to {contact.email}
+      </button>
     </section>
   );
 }

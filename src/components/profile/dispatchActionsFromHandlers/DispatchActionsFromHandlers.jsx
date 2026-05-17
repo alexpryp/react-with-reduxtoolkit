@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 
+import "@/components/profile/dispatchActionsFromHandlers/styles.css";
+
 import ContactList from "@/components/profile/dispatchActionsFromHandlers/ContactList";
 import Chat from "@/components/profile/dispatchActionsFromHandlers/Chat";
 import {

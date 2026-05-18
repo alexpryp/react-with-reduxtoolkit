@@ -12,8 +12,6 @@ export default function DispatchActionsFromHandlers() {
   const message = state.contacts[state.selectedId].message;
   const contact = contacts.find((c) => c.id === state.selectedId);
 
-  console.log(state);
-
   return (
     <>
       <hr />

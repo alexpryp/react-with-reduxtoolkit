@@ -28,7 +28,8 @@ import DispatchActionsFromHandlers from "@/components/profile/dispatchActionsFro
 import CheckList from "@/components/checkList/CheckList";
 import RenderList from "@/components/renderList/RenderList";
 import Counter from "./features/counter/Counter";
-import CounterWithRef from "@/components/escapeHatchesReact/counterWithRef/CounterWithRef";
+import CounterWithRef from "@/components/escapeHatchesReact/useRefReact/counterWithRef/CounterWithRef";
+import StopwatchWithRef from "@/components/escapeHatchesReact/useRefReact/stopwatchWithRef/StopwatchWithRef";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -64,6 +65,7 @@ function App() {
         <hr />
         <h1>Escape Hatches of React</h1>
         <CounterWithRef />
+        <StopwatchWithRef />
       </div>
 
       <div>

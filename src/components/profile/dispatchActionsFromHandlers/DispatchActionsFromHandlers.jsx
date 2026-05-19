@@ -15,7 +15,7 @@ export default function DispatchActionsFromHandlers() {
   return (
     <>
       <hr />
-      <div>
+      <div style={{ display: "flex" }}>
         <ContactList
           contacts={contacts}
           selectedId={state.selectedId}

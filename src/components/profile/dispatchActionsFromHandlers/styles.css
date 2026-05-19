@@ -4,7 +4,7 @@ ul {
 
 .chat,
 .contact-list {
-  float: left;
+  display: flex;
   margin-bottom: 20px;
 }
 ul,

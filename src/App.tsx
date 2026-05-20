@@ -31,6 +31,7 @@ import Counter from "./features/counter/Counter";
 import CounterWithRef from "@/components/escapeHatchesReact/useRefReact/counterWithRef/CounterWithRef";
 import StopwatchWithRef from "@/components/escapeHatchesReact/useRefReact/stopwatchWithRef/StopwatchWithRef";
 import FixBrokenChat from "@/components/escapeHatchesReact/useRefReact/fixBrockenChat/FixBrokenChat";
+import FixBrokenReRender from "@/components/escapeHatchesReact/useRefReact/fixBrokenReRender/FixBrokenReRender";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -68,6 +69,7 @@ function App() {
         <CounterWithRef />
         <StopwatchWithRef />
         <FixBrokenChat />
+        <FixBrokenReRender />
       </div>
 
       <div>

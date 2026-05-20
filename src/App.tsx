@@ -32,6 +32,7 @@ import CounterWithRef from "@/components/escapeHatchesReact/useRefReact/counterW
 import StopwatchWithRef from "@/components/escapeHatchesReact/useRefReact/stopwatchWithRef/StopwatchWithRef";
 import FixBrokenChat from "@/components/escapeHatchesReact/useRefReact/fixBrockenChat/FixBrokenChat";
 import FixBrokenReRender from "@/components/escapeHatchesReact/useRefReact/fixBrokenReRender/FixBrokenReRender";
+import FixDebouncing from "@/components/escapeHatchesReact/useRefReact/fixDebouncing/FixDebouncing";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -70,6 +71,7 @@ function App() {
         <StopwatchWithRef />
         <FixBrokenChat />
         <FixBrokenReRender />
+        <FixDebouncing />
       </div>
 
       <div>

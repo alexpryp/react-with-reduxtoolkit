@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function CatFriends() {
   const itemsRef = useRef(null);
-  const [catList, setCatList] = useState(setupCatList);
+  const [catList] = useState(setupCatList);
 
   function scrollToCat(cat) {
     const map = getMap();

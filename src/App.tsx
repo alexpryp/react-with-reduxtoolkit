@@ -34,7 +34,8 @@ import FixBrokenChat from "@/components/escapeHatchesReact/useRefReact/fixBrocke
 import FixBrokenReRender from "@/components/escapeHatchesReact/useRefReact/fixBrokenReRender/FixBrokenReRender";
 import FixDebouncing from "@/components/escapeHatchesReact/useRefReact/fixDebouncing/FixDebouncing";
 import ReadLatestState from "@/components/escapeHatchesReact/useRefReact/readLatestState/ReadLatestState";
-import ScrollintToElement from "@/components/escapeHatchesReact/useRefReact/scrollingToElement/ScrollingToElement";
+//import ScrollintToElement from "@/components/escapeHatchesReact/useRefReact/scrollingToElement/ScrollingToElement";
+import VideoWithUseEffect from "@/components/escapeHatchesReact/useEffectReact/videoWithUseEffect/VideoWithUseEffect";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -75,7 +76,8 @@ function App() {
         <FixBrokenReRender />
         <FixDebouncing />
         <ReadLatestState />
-        <ScrollintToElement />
+        {/*<ScrollintToElement />*/}
+        <VideoWithUseEffect />
       </div>
 
       <div>

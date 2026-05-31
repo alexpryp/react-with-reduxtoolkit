@@ -36,6 +36,7 @@ import FixDebouncing from "@/components/escapeHatchesReact/useRefReact/fixDeboun
 import ReadLatestState from "@/components/escapeHatchesReact/useRefReact/readLatestState/ReadLatestState";
 //import ScrollintToElement from "@/components/escapeHatchesReact/useRefReact/scrollingToElement/ScrollingToElement";
 import VideoWithUseEffect from "@/components/escapeHatchesReact/useEffectReact/videoWithUseEffect/VideoWithUseEffect";
+import DataWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/dataWithoutEffects/DataWithoutEffects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -78,6 +79,7 @@ function App() {
         <ReadLatestState />
         {/*<ScrollintToElement />*/}
         <VideoWithUseEffect />
+        <DataWithoutEffects />
       </div>
 
       <div>

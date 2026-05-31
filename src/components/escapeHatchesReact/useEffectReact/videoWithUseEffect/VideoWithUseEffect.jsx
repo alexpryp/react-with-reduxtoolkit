@@ -13,7 +13,7 @@ function VideoPlayer({ src, isPlaying }) {
     }
   }, [isPlaying]);
 
-  return <video ref={ref} src={src} loop playsInline />;
+  return <video controls={true} ref={ref} src={src} loop playsInline />;
 }
 
 export default function VideoWithUseEffect() {

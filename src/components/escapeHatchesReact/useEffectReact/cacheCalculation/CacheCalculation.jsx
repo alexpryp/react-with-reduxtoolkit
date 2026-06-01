@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import {
   initialTodos,
   createTodo,
@@ -9,10 +9,9 @@ export default function CacheCalculation() {
   const [todos, setTodos] = useState(initialTodos);
   const [showActive, setShowActive] = useState(false);
   const [text, setText] = useState("");
-  const [visibleTodos, setVisibleTodos] = useState([]);
 
-  useEffect(() => {
-    setVisibleTodos(getVisibleTodos(todos, showActive));
+  const visibleTodos = useMemo(() => {
+    return getVisibleTodos(todos, showActive);
   }, [todos, showActive]);
 
   function handleAddClick() {

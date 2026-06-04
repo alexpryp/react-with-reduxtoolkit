@@ -31,7 +31,11 @@ export default function ResetStateWithoutEffects() {
           selectedId={selectedId}
           onSelect={(id) => setSelectedId(id)}
         />
-        <EditContact savedContact={selectedContact} onSave={handleSave} />
+        <EditContact
+          key={selectedContact.id}
+          savedContact={selectedContact}
+          onSave={handleSave}
+        />
       </div>
     </>
   );

@@ -1,0 +1,19 @@
+ul {
+  padding-inline-start: 20px;
+}
+
+li {
+  list-style-type: square;
+}
+
+label {
+  display: block;
+}
+
+input {
+  margin-top: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}

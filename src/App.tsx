@@ -37,6 +37,8 @@ import ReadLatestState from "@/components/escapeHatchesReact/useRefReact/readLat
 //import ScrollintToElement from "@/components/escapeHatchesReact/useRefReact/scrollingToElement/ScrollingToElement";
 import VideoWithUseEffect from "@/components/escapeHatchesReact/useEffectReact/videoWithUseEffect/VideoWithUseEffect";
 import DataWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/dataWithoutEffects/DataWithoutEffects";
+import CacheCalculation from "@/components/escapeHatchesReact/useEffectReact/cacheCalculation/CacheCalculation";
+import ResetStateWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/ResetStateWithoutEffects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -80,6 +82,8 @@ function App() {
         {/*<ScrollintToElement />*/}
         <VideoWithUseEffect />
         <DataWithoutEffects />
+        <CacheCalculation />
+        <ResetStateWithoutEffects />
       </div>
 
       <div>

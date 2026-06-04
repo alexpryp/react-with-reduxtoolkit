@@ -1,5 +1,7 @@
 import { useState } from "react";
 import ContactList from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/ContactList";
+import EditContact from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/EditContact";
+import "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/style.css";
 
 export default function ResetStateWithoutEffects() {
   const [contacts, setContacts] = useState(initialContacts);
@@ -27,8 +29,9 @@ export default function ResetStateWithoutEffects() {
         <ContactList
           contacts={contacts}
           selectedId={selectedId}
-          onSelected={(id) => setSelectedId(id)}
+          onSelect={(id) => setSelectedId(id)}
         />
+        <EditContact savedContact={selectedContact} onSave={handleSave} />
       </div>
     </>
   );

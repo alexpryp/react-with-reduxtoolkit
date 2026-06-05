@@ -39,6 +39,7 @@ import VideoWithUseEffect from "@/components/escapeHatchesReact/useEffectReact/v
 import DataWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/dataWithoutEffects/DataWithoutEffects";
 import CacheCalculation from "@/components/escapeHatchesReact/useEffectReact/cacheCalculation/CacheCalculation";
 import ResetStateWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/ResetStateWithoutEffects";
+import FixReconnectionOnKeystrokes from "@/components/escapeHatchesReact/useEffectReact/fixReconnectionOnKeystrokes/FixReconnectionOnKeystrokes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -84,6 +85,7 @@ function App() {
         <DataWithoutEffects />
         <CacheCalculation />
         <ResetStateWithoutEffects />
+        <FixReconnectionOnKeystrokes />
       </div>
 
       <div>

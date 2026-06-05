@@ -11,7 +11,7 @@ function ChatRoom({ roomId }) {
     connection.connect();
 
     return () => connection.disconnect();
-  });
+  }, [roomId]);
 
   return (
     <>

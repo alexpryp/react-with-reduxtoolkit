@@ -40,6 +40,7 @@ import DataWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/d
 import CacheCalculation from "@/components/escapeHatchesReact/useEffectReact/cacheCalculation/CacheCalculation";
 import ResetStateWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/ResetStateWithoutEffects";
 import FixReconnectionOnKeystrokes from "@/components/escapeHatchesReact/useEffectReact/fixReconnectionOnKeystrokes/FixReconnectionOnKeystrokes";
+import SwitchSynchronization from "@/components/escapeHatchesReact/useEffectReact/switchSynchronization/SwitchSynchronization";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -86,6 +87,7 @@ function App() {
         <CacheCalculation />
         <ResetStateWithoutEffects />
         <FixReconnectionOnKeystrokes />
+        <SwitchSynchronization />
       </div>
 
       <div>

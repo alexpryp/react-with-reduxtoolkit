@@ -23,6 +23,24 @@ export default function PopulateChain() {
     };
   }, []);
 
+  useEffect(() => {
+    let ignore = false;
+
+    if (planetId) {
+      fetchData(`/planets/${planetId}/places`).then((result) => {
+        if (!ignore) {
+          console.log("Fetched a list of places.");
+          setPlaceList(result);
+          setPlaceId(result[0].id);
+        }
+      });
+    }
+
+    return () => {
+      ignore = true;
+    };
+  }, [planetId]);
+
   return (
     <>
       <hr />

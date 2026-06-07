@@ -39,6 +39,10 @@ import VideoWithUseEffect from "@/components/escapeHatchesReact/useEffectReact/v
 import DataWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/dataWithoutEffects/DataWithoutEffects";
 import CacheCalculation from "@/components/escapeHatchesReact/useEffectReact/cacheCalculation/CacheCalculation";
 import ResetStateWithoutEffects from "@/components/escapeHatchesReact/useEffectReact/resetStateWithoutEffects/ResetStateWithoutEffects";
+import FixReconnectionOnKeystrokes from "@/components/escapeHatchesReact/useEffectReact/fixReconnectionOnKeystrokes/FixReconnectionOnKeystrokes";
+import SwitchSynchronization from "@/components/escapeHatchesReact/useEffectReact/switchSynchronization/SwitchSynchronization";
+import FixConnectionSwitch from "@/components/escapeHatchesReact/useEffectReact/fixConnectionSwitch/FixConnectionSwitch";
+import PopulateChain from "@/components/escapeHatchesReact/useEffectReact/populateChain/PopulateChain";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -84,6 +88,10 @@ function App() {
         <DataWithoutEffects />
         <CacheCalculation />
         <ResetStateWithoutEffects />
+        <FixReconnectionOnKeystrokes />
+        <SwitchSynchronization />
+        <FixConnectionSwitch />
+        <PopulateChain />
       </div>
 
       <div>

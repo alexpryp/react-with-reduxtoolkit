@@ -1,16 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useEffectEvent } from "react";
 
 export default function FixVariable() {
   const [count, setCount] = useState(0);
   const [increment, setIncrement] = useState(1);
 
+  const onTick = useEffectEvent(() => {
+    setCount((c) => c + increment);
+  });
+
   useEffect(() => {
     const id = setInterval(() => {
-      setCount((c) => c + increment);
+      //setCount((c) => c + increment);
+      onTick();
     }, 1000);
 
     return () => clearInterval(id);
-  }, [increment]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>

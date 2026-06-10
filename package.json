@@ -12,8 +12,8 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
     "immer": "^11.1.8",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^0.0.0-experimental-900ae094-20260605",
+    "react-dom": "^0.0.0-experimental-900ae094-20260605",
     "react-redux": "^9.2.0",
     "use-immer": "^0.11.0"
   },

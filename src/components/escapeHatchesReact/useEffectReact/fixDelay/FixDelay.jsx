@@ -1,8 +1,9 @@
 import { useState, useEffect, useEffectEvent } from "react";
 
-export default function FixVariable() {
+export default function FixDelay() {
   const [count, setCount] = useState(0);
   const [increment, setIncrement] = useState(1);
+  const [delay, setDelay] = useState(100);
 
   const onTick = useEffectEvent(() => {
     setCount((c) => c + increment);
@@ -11,29 +12,32 @@ export default function FixVariable() {
   useEffect(() => {
     const id = setInterval(() => {
       onTick();
-    }, 1000);
+    }, delay);
 
-    return () => clearInterval(id);
+    return () => {
+      clearInterval(id);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [delay]);
 
   return (
     <>
       <hr />
-      <h2>Fix a variable that doesn’t update </h2>
-      <h3>
+      <h2>Fix a non-adjustable delay </h2>
+      <h1>
         Counter: {count}
         <button onClick={() => setCount(0)}>Reset</button>
-      </h3>
+      </h1>
+      <hr />
       <p>
-        Every second, increment by:
+        Increment by:
         <button
           disabled={increment === 0}
           onClick={() => {
             setIncrement((i) => i - 1);
           }}
         >
-          -
+          –
         </button>
         <b>{increment}</b>
         <button
@@ -42,6 +46,25 @@ export default function FixVariable() {
           }}
         >
           +
+        </button>
+      </p>
+      <p>
+        Increment delay:
+        <button
+          disabled={delay === 100}
+          onClick={() => {
+            setDelay((d) => d - 100);
+          }}
+        >
+          –100 ms
+        </button>
+        <b>{delay} ms</b>
+        <button
+          onClick={() => {
+            setDelay((d) => d + 100);
+          }}
+        >
+          +100 ms
         </button>
       </p>
     </>

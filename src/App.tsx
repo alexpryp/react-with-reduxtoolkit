@@ -44,6 +44,7 @@ import SwitchSynchronization from "@/components/escapeHatchesReact/useEffectReac
 import FixConnectionSwitch from "@/components/escapeHatchesReact/useEffectReact/fixConnectionSwitch/FixConnectionSwitch";
 import PopulateChain from "@/components/escapeHatchesReact/useEffectReact/populateChain/PopulateChain";
 import FixVariable from "@/components/escapeHatchesReact/useEffectReact/fixVariable/FixVariable";
+import FixDelay from "@/components/escapeHatchesReact/useEffectReact/fixDelay/FixDelay";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -94,6 +95,7 @@ function App() {
         <FixConnectionSwitch />
         <PopulateChain />
         <FixVariable />
+        <FixDelay />
       </div>
 
       <div>

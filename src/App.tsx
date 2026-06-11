@@ -43,6 +43,9 @@ import FixReconnectionOnKeystrokes from "@/components/escapeHatchesReact/useEffe
 import SwitchSynchronization from "@/components/escapeHatchesReact/useEffectReact/switchSynchronization/SwitchSynchronization";
 import FixConnectionSwitch from "@/components/escapeHatchesReact/useEffectReact/fixConnectionSwitch/FixConnectionSwitch";
 import PopulateChain from "@/components/escapeHatchesReact/useEffectReact/populateChain/PopulateChain";
+import FixVariable from "@/components/escapeHatchesReact/useEffectReact/fixVariable/FixVariable";
+import FixDelay from "@/components/escapeHatchesReact/useEffectReact/fixDelay/FixDelay";
+import FixDelayedNotification from "@/components/escapeHatchesReact/useEffectReact/fixDelayedNotification/FixDelayedNotification";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -92,6 +95,9 @@ function App() {
         <SwitchSynchronization />
         <FixConnectionSwitch />
         <PopulateChain />
+        <FixVariable />
+        <FixDelay />
+        <FixDelayedNotification />
       </div>
 
       <div>

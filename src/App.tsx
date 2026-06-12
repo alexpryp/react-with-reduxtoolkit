@@ -47,6 +47,7 @@ import FixVariable from "@/components/escapeHatchesReact/useEffectReact/fixVaria
 import FixDelay from "@/components/escapeHatchesReact/useEffectReact/fixDelay/FixDelay";
 import FixDelayedNotification from "@/components/escapeHatchesReact/useEffectReact/fixDelayedNotification/FixDelayedNotification";
 import FixResettingInterval from "@/components/escapeHatchesReact/useEffectReact/fixResettingInterval/FixResettingInterval";
+import FixRetriggeringAnimation from "@/components/escapeHatchesReact/useEffectReact/fixRetriggeringAnimation/FixRetriggeringAnimation";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -100,6 +101,7 @@ function App() {
         <FixDelay />
         <FixDelayedNotification />
         <FixResettingInterval />
+        <FixRetriggeringAnimation />
       </div>
 
       <div>

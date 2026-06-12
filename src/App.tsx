@@ -46,6 +46,7 @@ import PopulateChain from "@/components/escapeHatchesReact/useEffectReact/popula
 import FixVariable from "@/components/escapeHatchesReact/useEffectReact/fixVariable/FixVariable";
 import FixDelay from "@/components/escapeHatchesReact/useEffectReact/fixDelay/FixDelay";
 import FixDelayedNotification from "@/components/escapeHatchesReact/useEffectReact/fixDelayedNotification/FixDelayedNotification";
+import FixResettingInterval from "@/components/escapeHatchesReact/useEffectReact/fixResettingInterval/FixResettingInterval";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -98,6 +99,7 @@ function App() {
         <FixVariable />
         <FixDelay />
         <FixDelayedNotification />
+        <FixResettingInterval />
       </div>
 
       <div>

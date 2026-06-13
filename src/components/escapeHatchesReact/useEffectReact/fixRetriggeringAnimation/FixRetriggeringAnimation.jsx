@@ -56,7 +56,6 @@ export default function FixRetriggeringAnimation() {
         Fade in duration: {duration} ms
       </label>
       <button onClick={() => setShow(!show)}>{show ? "Remove" : "Show"}</button>
-      <hr />
       {show && <Welcome duration={duration} />}
     </>
   );

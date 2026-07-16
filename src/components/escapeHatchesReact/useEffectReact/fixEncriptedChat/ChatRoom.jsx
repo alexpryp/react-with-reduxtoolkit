@@ -1,13 +1,49 @@
-import { useState, useEffect } from "react";
-import { useEffectEvent } from "react";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import {
+  createEncryptedConnection,
+  createUnencryptedConnection,
+} from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/chat.js";
 
-export default function ChatRoom({ roomId, createConnection, onMessage }) {
+const Msg = ({ closeToast, data }) => (
+  <div>
+    {`New message: ${data.msg}`}
+    <button onClick={closeToast}>Close</button>
+  </div>
+);
+
+export default function ChatRoom({
+  roomId,
+  isEncrypted,
+}) {
+
   useEffect(() => {
-    const connection = createConnection();
-    connection.on("message", (msg) => onMessage(msg));
-    connection.connect();
-    return () => connection.disconnect();
-  }, [createConnection, onMessage]);
+    function createConnection() {
+      const options = {
+        serverUrl: "https://localhost:1234",
+        roomId: roomId,
+      };
+      if (isEncrypted) {
+        return createEncryptedConnection(options);
+      } else {
+        return createUnencryptedConnection(options);
+      }
+    }
 
-  return <h1>Welcome to the {roomId} room!</h1>;
+    const connection = createConnection();
+
+    connection.on("message", (msg) => {
+        toast.success(Msg, {
+          className: "black-background",
+          progressClassName: "fancy-progress-bar",
+          data: { msg: msg },
+        });
+    })
+
+    connection.connect();
+
+    return () => connection.disconnect();
+  }, [isEncrypted, roomId]);
+
+  return <h3>Welcome to the {roomId} room!</h3>;
 }

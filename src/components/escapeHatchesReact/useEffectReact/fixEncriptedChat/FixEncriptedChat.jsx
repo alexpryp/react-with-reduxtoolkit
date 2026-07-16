@@ -1,10 +1,6 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import ChatRoom from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/ChatRoom.jsx";
-import {
-  createEncryptedConnection,
-  createUnencryptedConnection,
-} from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/chat.js";
-import { showNotification } from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/notifications";
 
 export default function FixEncriptedChat() {
   const [isDark, setIsDark] = useState(false);
@@ -39,24 +35,11 @@ export default function FixEncriptedChat() {
           <option value="music">music</option>
         </select>
       </label>
-      <hr />
       <ChatRoom
         roomId={roomId}
-        onMessage={(msg) => {
-          showNotification("New message: " + msg, isDark ? "dark" : "light");
-        }}
-        createConnection={() => {
-          const options = {
-            serverUrl: "https://localhost:1234",
-            roomId: roomId,
-          };
-          if (isEncrypted) {
-            return createEncryptedConnection(options);
-          } else {
-            return createUnencryptedConnection(options);
-          }
-        }}
+        isEncrypted={isEncrypted}
       />
+      <ToastContainer theme={isDark ? "dark" : "light"} />
     </>
   );
 }

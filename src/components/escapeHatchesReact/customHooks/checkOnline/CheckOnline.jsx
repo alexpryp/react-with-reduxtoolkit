@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function CheckOnlineHook() {
+export default function CheckOnline() {
   const [isOnline, setIsOnline] = useState(true);
 
   useEffect(() => {

@@ -50,6 +50,7 @@ import FixResettingInterval from "@/components/escapeHatchesReact/useEffectReact
 import FixRetriggeringAnimation from "@/components/escapeHatchesReact/useEffectReact/fixRetriggeringAnimation/FixRetriggeringAnimation";
 import FixReconnectingChat from "@/components/escapeHatchesReact/useEffectReact/fixReconnectingChat/FixReconnectingChat";
 import FixEncriptedChat from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/FixEncriptedChat";
+import CheckOnlineHook from "@/components/escapeHatchesReact/customHooks/checkOnlineHook/CheckOnlineHook";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -106,6 +107,7 @@ function App() {
         <FixRetriggeringAnimation />
         <FixReconnectingChat />
         <FixEncriptedChat />
+        <CheckOnlineHook />
       </div>
 
       <div>

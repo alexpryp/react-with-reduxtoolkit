@@ -53,6 +53,7 @@ import FixEncriptedChat from "@/components/escapeHatchesReact/useEffectReact/fix
 import CheckOnline from "@/components/escapeHatchesReact/customHooks/checkOnline/CheckOnline";
 import SaveButton from "@/components/escapeHatchesReact/customHooks/SaveButton/SaveButton";
 import NameForm from '@/components/escapeHatchesReact/customHooks/nameForm/NameForm';
+import ChatRoom from '@/components/escapeHatchesReact/customHooks/chatRoom/ChatRoom';
 
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
         <CheckOnline />
         <SaveButton />
         <NameForm />
+        <ChatRoom />
       </div>
 
       <div>

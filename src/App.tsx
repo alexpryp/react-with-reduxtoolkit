@@ -52,7 +52,7 @@ import FixReconnectingChat from "@/components/escapeHatchesReact/useEffectReact/
 import FixEncriptedChat from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/FixEncriptedChat";
 import CheckOnline from "@/components/escapeHatchesReact/customHooks/checkOnline/CheckOnline";
 import SaveButton from "@/components/escapeHatchesReact/customHooks/SaveButton/SaveButton";
-
+import NameForm from '@/components/escapeHatchesReact/customHooks/nameForm/NameForm';
 
 
 function App() {
@@ -112,6 +112,7 @@ function App() {
         <FixEncriptedChat />
         <CheckOnline />
         <SaveButton />
+        <NameForm />
       </div>
 
       <div>

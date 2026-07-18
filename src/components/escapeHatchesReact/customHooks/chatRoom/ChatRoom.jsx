@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { ToastContainer } from "react-toastify";
+
 import Room from '@/components/escapeHatchesReact/customHooks/chatRoom/Room';
 
 export default function ChatRoom() {
@@ -16,6 +18,7 @@ export default function ChatRoom() {
         </select>
       </label>
       <Room roomId={roomId} />
+      <ToastContainer theme={"dark"} />
     </>
   )
 }

@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
+import { toast } from "react-toastify";
+
 import { createConnection } from '@/components/escapeHatchesReact/customHooks/chatRoom/chat';
+
+const Msg = ({ closeToast, data }) => (
+  <div>
+    {`New message: ${data.msg}`}
+    <button onClick={closeToast}>Close</button>
+  </div>
+);
 
 export default function Room({ roomId }) {
   const [serverUrl, setServerUrl] = useState('https://localhost:1234');
@@ -13,7 +22,12 @@ export default function Room({ roomId }) {
     const connection = createConnection(options);
 
     connection.on('message', (msg) => {
-      showNotification('New message: ' + msg);
+      toast.success(Msg, {
+        className: "black-background",
+        progressClassName: "fancy-progress-bar",
+        data: { msg: msg },
+      });
+      // showNotification('New message: ' + msg);
     });
 
     connection.connect();
@@ -27,7 +41,7 @@ export default function Room({ roomId }) {
         Server URL:
         <input value={serverUrl} onChange={e => setServerUrl(e.target.value)} />
       </label>
-      <h1>Welcome to the {roomId} room!</h1>
+      <h2>Welcome to the {roomId} room!</h2>
     </>
   );
 }

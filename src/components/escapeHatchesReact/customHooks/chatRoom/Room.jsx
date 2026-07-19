@@ -1,39 +1,14 @@
-import { useState, useEffect } from 'react';
-import { toast } from "react-toastify";
+import { useState } from 'react';
 
-import { createConnection } from '@/components/escapeHatchesReact/customHooks/chatRoom/chat';
-
-const Msg = ({ closeToast, data }) => (
-  <div>
-    {`New message: ${data.msg}`}
-    <button onClick={closeToast}>Close</button>
-  </div>
-);
+import { useChatRoom } from '@/components/escapeHatchesReact/customHooks/hooks/useChatRoom';
 
 export default function Room({ roomId }) {
   const [serverUrl, setServerUrl] = useState('https://localhost:1234');
 
-  useEffect(() => {
-    const options = {
-      serverUrl: serverUrl,
-      roomId: roomId
-    };
-
-    const connection = createConnection(options);
-
-    connection.on('message', (msg) => {
-      toast.success(Msg, {
-        className: "black-background",
-        progressClassName: "fancy-progress-bar",
-        data: { msg: msg },
-      });
-      // showNotification('New message: ' + msg);
-    });
-
-    connection.connect();
-
-    return () => connection.disconnect();
-  }, [roomId, serverUrl]);
+  useChatRoom({
+    roomId: roomId,
+    serverUrl: serverUrl
+  });
 
   return (
     <>

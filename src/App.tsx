@@ -54,7 +54,7 @@ import CheckOnline from "@/components/escapeHatchesReact/customHooks/checkOnline
 import SaveButton from "@/components/escapeHatchesReact/customHooks/SaveButton/SaveButton";
 import NameForm from '@/components/escapeHatchesReact/customHooks/nameForm/NameForm';
 import ChatRoom from '@/components/escapeHatchesReact/customHooks/chatRoom/ChatRoom';
-
+import OnlineStatus from '@/components/escapeHatchesReact/customHooks/onlineStatus/OnlineStatus';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -115,6 +115,7 @@ function App() {
         <SaveButton />
         <NameForm />
         <ChatRoom />
+        <OnlineStatus />
       </div>
 
       <div>

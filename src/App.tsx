@@ -45,14 +45,17 @@ import FixConnectionSwitch from "@/components/escapeHatchesReact/useEffectReact/
 import PopulateChain from "@/components/escapeHatchesReact/useEffectReact/populateChain/PopulateChain";
 import FixVariable from "@/components/escapeHatchesReact/useEffectReact/fixVariable/FixVariable";
 import FixDelay from "@/components/escapeHatchesReact/useEffectReact/fixDelay/FixDelay";
-import FixDelayedNotification from "@/components/escapeHatchesReact/useEffectReact/fixDelayedNotification/FixDelayedNotification";
+// import FixDelayedNotification from "@/components/escapeHatchesReact/useEffectReact/fixDelayedNotification/FixDelayedNotification";
 import FixResettingInterval from "@/components/escapeHatchesReact/useEffectReact/fixResettingInterval/FixResettingInterval";
 import FixRetriggeringAnimation from "@/components/escapeHatchesReact/useEffectReact/fixRetriggeringAnimation/FixRetriggeringAnimation";
 import FixReconnectingChat from "@/components/escapeHatchesReact/useEffectReact/fixReconnectingChat/FixReconnectingChat";
-import FixEncriptedChat from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/FixEncriptedChat";
+// import FixEncriptedChat from "@/components/escapeHatchesReact/useEffectReact/fixEncriptedChat/FixEncriptedChat";
 import CheckOnline from "@/components/escapeHatchesReact/customHooks/checkOnline/CheckOnline";
 import SaveButton from "@/components/escapeHatchesReact/customHooks/SaveButton/SaveButton";
-
+import NameForm from '@/components/escapeHatchesReact/customHooks/nameForm/NameForm';
+// import ChatRoom from '@/components/escapeHatchesReact/customHooks/chatRoom/ChatRoom';
+import OnlineStatus from '@/components/escapeHatchesReact/customHooks/onlineStatus/OnlineStatus';
+import FedeInWelcome from '@/components/escapeHatchesReact/customHooks/fedeInWelcome/FedeInWelcome';
 
 
 function App() {
@@ -105,13 +108,17 @@ function App() {
         <PopulateChain />
         <FixVariable />
         <FixDelay />
-        <FixDelayedNotification />
+        {/*<FixDelayedNotification />*/}
         <FixResettingInterval />
         <FixRetriggeringAnimation />
         <FixReconnectingChat />
-        <FixEncriptedChat />
+        {/*<FixEncriptedChat />*/}
         <CheckOnline />
         <SaveButton />
+        <NameForm />
+        {/*<ChatRoom />*/}
+        <OnlineStatus />
+        <FedeInWelcome />
       </div>
 
       <div>

@@ -56,7 +56,7 @@ import NameForm from '@/components/escapeHatchesReact/customHooks/nameForm/NameF
 // import ChatRoom from '@/components/escapeHatchesReact/customHooks/chatRoom/ChatRoom';
 import OnlineStatus from '@/components/escapeHatchesReact/customHooks/onlineStatus/OnlineStatus';
 import FedeInWelcome from '@/components/escapeHatchesReact/customHooks/fedeInWelcome/FedeInWelcome';
-
+import ExtractUseCounter from '@/components/escapeHatchesReact/customHooks/extractUseCounter/ExtractUseCounter';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -119,6 +119,7 @@ function App() {
         {/*<ChatRoom />*/}
         <OnlineStatus />
         <FedeInWelcome />
+        <ExtractUseCounter />
       </div>
 
       <div>

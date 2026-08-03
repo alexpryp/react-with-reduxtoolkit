@@ -3,7 +3,7 @@ import { useCounterDelay } from '@/components/escapeHatchesReact/customHooks/hoo
 
 export default function MakeCounterDelay() {
   const [delay, setDelay] = useState(1000);
-  const count = useCounterDelay();
+  const count = useCounterDelay(delay);
 
   return (
     <>

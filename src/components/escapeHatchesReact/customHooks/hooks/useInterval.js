@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
 
-export function useInterval(setCount, delay) {
+export function useInterval(onTick, delay) {
   useEffect(() => {
-    const id = setInterval(() => {
-      setCount();
-    }, delay);
+    const id = setInterval(onTick, delay);
 
     return () => clearInterval(id);
-  }, [setCount, delay]);
+  }, [onTick, delay]);
 }

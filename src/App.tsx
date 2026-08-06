@@ -58,6 +58,8 @@ import OnlineStatus from '@/components/escapeHatchesReact/customHooks/onlineStat
 import FedeInWelcome from '@/components/escapeHatchesReact/customHooks/fedeInWelcome/FedeInWelcome';
 import ExtractUseCounter from '@/components/escapeHatchesReact/customHooks/extractUseCounter/ExtractUseCounter';
 import MakeCounterDelay from '@/components/escapeHatchesReact/customHooks/makeCounterDelay/MakeCounterDelay';
+import ResettingInterval from '@/components/escapeHatchesReact/customHooks/resettingInterval/ResettingInterval';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -122,6 +124,7 @@ function App() {
         <FedeInWelcome />
         <ExtractUseCounter />
         <MakeCounterDelay />
+        <ResettingInterval />
       </div>
 
       <div>

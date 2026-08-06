@@ -33,5 +33,6 @@ function useAnimationLoop(isRunning, drawFrame) {
     tick();
 
     return () => cancelAnimationFrame(frameId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isRunning]);
 }

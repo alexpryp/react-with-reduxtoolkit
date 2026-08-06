@@ -59,7 +59,7 @@ import FedeInWelcome from '@/components/escapeHatchesReact/customHooks/fedeInWel
 import ExtractUseCounter from '@/components/escapeHatchesReact/customHooks/extractUseCounter/ExtractUseCounter';
 import MakeCounterDelay from '@/components/escapeHatchesReact/customHooks/makeCounterDelay/MakeCounterDelay';
 import ResettingInterval from '@/components/escapeHatchesReact/customHooks/resettingInterval/ResettingInterval';
-
+import StaggeringMovement from '@/components/escapeHatchesReact/customHooks/staggeringMovement/StaggeringMovement';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -125,6 +125,7 @@ function App() {
         <ExtractUseCounter />
         <MakeCounterDelay />
         <ResettingInterval />
+        <StaggeringMovement />
       </div>
 
       <div>

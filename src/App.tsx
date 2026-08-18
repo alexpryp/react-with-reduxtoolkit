@@ -61,6 +61,9 @@ import MakeCounterDelay from '@/components/escapeHatchesReact/customHooks/makeCo
 import ResettingInterval from '@/components/escapeHatchesReact/customHooks/resettingInterval/ResettingInterval';
 import StaggeringMovement from '@/components/escapeHatchesReact/customHooks/staggeringMovement/StaggeringMovement';
 
+import ClassLessons from '@/components/classLessons/ClassLessons';
+
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -126,6 +129,7 @@ function App() {
         <MakeCounterDelay />
         <ResettingInterval />
         <StaggeringMovement />
+        <ClassLessons />
       </div>
 
       <div>

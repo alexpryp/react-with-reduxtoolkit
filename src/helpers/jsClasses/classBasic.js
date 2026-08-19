@@ -65,6 +65,16 @@ const ladder = {
 };
 ladder.up().up().down().showStep().down().showStep();
 
+function UserFunc(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
+const user2 = new UserFunc('Jack');
+console.log(user2.name);
+console.log(user2.isAdmin);
+console.log(user2);
+
+
 export class User {
   constructor(name) {
     this.name = name;

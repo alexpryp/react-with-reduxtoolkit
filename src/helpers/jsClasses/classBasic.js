@@ -74,31 +74,40 @@ console.log( user1.ref().name );
 // console.log(user2.isAdmin);
 // console.log(user2);
 
-const obj = {};
-function A() { return obj; };
-function B() { return obj; };
-const a = new A();
-const b = new B();
-console.log( a == b); // true
+// const obj = {};
+// function A() { return obj; };
+// function B() { return obj; };
+// const a = new A();
+// const b = new B();
+// console.log( a == b); // true
 
-function Calculator1() {
+// function Calculator1() {
+//   this.read = function() {
+//     this.a = +prompt('Enter value a: ', 0);
+//     this.b = +prompt('Enter value b: ', 0);
+//   };
+//   this.sum = function() {
+//     return this.a + this.b;
+//   };
+//   this.mul = function() {
+//     return this.a * this.b;
+//   };
+// }
+// const calculator1 = new Calculator1();
+// calculator1.read();
+// console.log('Sum=' + calculator1.sum());
+// console.log('Mul=' + calculator1.mul());
+
+function Accumulator(startingValue) {
+  this.value = startingValue;
   this.read = function() {
-    this.a = +prompt('Enter value a: ', 0);
-    this.b = +prompt('Enter value b: ', 0);
-  };
-  this.sum = function() {
-    return this.a + this.b;
-  };
-  this.mul = function() {
-    return this.a * this.b;
+    this.value += +prompt('Enter value: ', 0);
   };
 }
-const calculator1 = new Calculator1();
-calculator1.read();
-console.log('Sum=' + calculator1.sum());
-console.log('Mul=' + calculator1.mul());
-
-
+const accumulator = new Accumulator(1);
+accumulator.read();
+accumulator.read();
+console.log(accumulator.value);
 
 export class User {
   constructor(name) {

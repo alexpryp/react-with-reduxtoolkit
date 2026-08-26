@@ -98,16 +98,25 @@ console.log( user1.ref().name );
 // console.log('Sum=' + calculator1.sum());
 // console.log('Mul=' + calculator1.mul());
 
-function Accumulator(startingValue) {
-  this.value = startingValue;
-  this.read = function() {
-    this.value += +prompt('Enter value: ', 0);
-  };
-}
-const accumulator = new Accumulator(1);
-accumulator.read();
-accumulator.read();
-console.log(accumulator.value);
+// function Accumulator(startingValue) {
+//   this.value = startingValue;
+//   this.read = function() {
+//     this.value += +prompt('Enter value: ', 0);
+//   };
+// }
+// const accumulator = new Accumulator(1);
+// accumulator.read();
+// accumulator.read();
+// console.log(accumulator.value);
+
+// let id = Symbol.for("id");
+// let idAgain = Symbol.for("id");
+// console.log(`id === idAgain : ${id === idAgain}`);
+
+const sym = Symbol.for("name");
+const sym2 = Symbol.for("id");
+console.log(Symbol.keyFor(sym)); // name
+console.log(Symbol.keyFor(sym2)); // id
 
 export class User {
   constructor(name) {

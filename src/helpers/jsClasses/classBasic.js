@@ -6,29 +6,29 @@ export const userObj = {
   },
 };
 
-const user = { name: 'John' };
-const admin = { name: 'Admin' };
+// const user = { name: 'John' };
+// const admin = { name: 'Admin' };
 
-function sayHi() {
-  console.log( this.name );
-}
+// function sayHi() {
+//   console.log( this.name );
+// }
 
-user.f = sayHi;
-admin.f = sayHi;
+// user.f = sayHi;
+// admin.f = sayHi;
 
-user.f();
-admin.f();
+// user.f();
+// admin.f();
 
-function makeUser() {
-  return {
-    name: 'John',
-    ref() {
-      return this;
-    }
-  };
-}
-const user1 = makeUser();
-console.log( user1.ref().name );
+// function makeUser() {
+//   return {
+//     name: 'John',
+//     ref() {
+//       return this;
+//     }
+//   };
+// }
+// const user1 = makeUser();
+// console.log( user1.ref().name );
 
 // const calculator = {
 //   a: 0,
@@ -113,10 +113,50 @@ console.log( user1.ref().name );
 // let idAgain = Symbol.for("id");
 // console.log(`id === idAgain : ${id === idAgain}`);
 
-const sym = Symbol.for("name");
-const sym2 = Symbol.for("id");
-console.log(Symbol.keyFor(sym)); // name
-console.log(Symbol.keyFor(sym2)); // id
+// const sym = Symbol.for("name");
+// const sym2 = Symbol.for("id");
+// console.log(Symbol.keyFor(sym)); // name
+// console.log(Symbol.keyFor(sym2)); // id
+
+// const recipeMap = new Map([
+//   ['cucumber', 500],
+//   ['tomatoes', 350],
+//   ['onion',    50]
+// ]);
+// for (const vegetable of recipeMap.keys()) {
+//   console.log(vegetable);
+// }
+// for (const amount of recipeMap.values()) {
+//   console.log(amount);
+// }
+// for (const entry of recipeMap) {
+//   console.log(entry);
+// }
+// recipeMap.forEach((value, key, map) => {
+//   console.log(`${key}: ${value} in ${map}`);
+// })
+
+// const set = new Set();
+// const john = { name: "John" };
+// const pete = { name: "Pete" };
+// const mary = { name: "Mary" };
+// set.add(john);
+// set.add(pete);
+// set.add(mary);
+// set.add(john);
+// set.add(mary);
+// console.log(`Set size: ${set.size}`);
+// for (const user of set) {
+//   console.log(`User name from Set: ${user.name}`);
+// }
+// set.forEach((value, valueAgain, set) => {
+//   console.log(value);
+//   console.log(valueAgain);
+//   console.log(set);
+// });
+// console.log(set.keys());
+// console.log(set.values());
+// console.log(set.entries());
 
 export class User {
   constructor(name) {

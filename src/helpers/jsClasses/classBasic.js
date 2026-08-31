@@ -158,6 +158,51 @@ export const userObj = {
 // console.log(set.values());
 // console.log(set.entries());
 
+// const visitsCountMap = new Map();
+// function countUser(user) {
+//   const count = visitsCountMap.get(user) || 0;
+//   visitsCountMap.set(user, count + 1);
+// }
+// let john = {name: "John"};
+// countUser(john);
+// countUser(john);
+// console.log(`John visits count: ${visitsCountMap.get(john)}`);
+// // Now, john object should be garbage collected, but remains in memory, as it’s a key in visitsCountMap.
+// // We need to clean visitsCountMap when we remove users, otherwise it will grow in memory indefinitely. Such cleaning can become a tedious task in complex architectures.
+// john = null;
+// // We can avoid it by switching to WeakMap instead:
+
+// const visitsCountWeakMap = new WeakMap();
+// function countUser(user) {
+//   const count = visitsCountWeakMap.get(user) || 0;
+//   visitsCountWeakMap.set(user, count + 1);
+// }
+// let john = {name: "John"};
+// countUser(john);
+// countUser(john);
+// countUser(john);
+// console.log(`John visits count: ${visitsCountWeakMap.get(john)}`);
+// // Now we don’t have to clean visitsCountMap. 
+// // After john object becomes unreachable, by all means except as a key of WeakMap, 
+// // it gets removed from memory, along with the information by that key from WeakMap.
+// john = null;
+
+// const visitedSet = new WeakSet();
+// let john = { name: "John" };
+// const pete = { name: "Pete" };
+// const mary = { name: "Mary" };
+// visitedSet.add(john);
+// visitedSet.add(pete);
+// visitedSet.add(john);
+// // visitedSet has 2 users now
+// // check if John visited?
+// console.log(visitedSet.has(john)); //true
+// // check if Mary visited?
+// console.log(visitedSet.has(mary)); //false
+// john = null;
+// // visitedSet will be cleaned automatically
+// console.log(`visitedSet.has(john): ${visitedSet.has(john)}`);
+
 export class User {
   constructor(name) {
     this.name = name;

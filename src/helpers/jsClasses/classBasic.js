@@ -203,6 +203,36 @@ export const userObj = {
 // // visitedSet will be cleaned automatically
 // console.log(`visitedSet.has(john): ${visitedSet.has(john)}`);
 
+// const prices = {
+//   banana: 1,
+//   orange: 2,
+//   meat: 4,
+// };
+// const doublePrices = Object.fromEntries(
+//   // convert prices to array, map each key/value pair into another pair
+//   // and then fromEntries gives back the object
+//   Object.entries(prices).map(entry => [entry[0], entry[1] * 2])
+// );
+// console.log(doublePrices);
+
+const salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250,
+  "Mike": undefined,
+};
+function sumSalaries (salaries) {
+  let sum = 0;
+  for(const salary of Object.values(salaries)) {
+    if (salary) {
+      sum += salary;
+    }
+  }
+  return sum;
+}
+console.log(sumSalaries(salaries));
+
+
 export class User {
   constructor(name) {
     this.name = name;

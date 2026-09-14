@@ -291,6 +291,34 @@ export const userObj = {
 //   console.log( item2 ); // Item2
 // }
 // showMenu(options);
+// //---
+// const user = {
+//   name: "John",
+//   years: 30
+// };
+// const {name, years: age, isAdmin = false} = user;
+// console.log(name);
+// console.log(age);
+// console.log(isAdmin);
+// //---
+// const salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+// function topSalary(salaries) {
+//   let mostName = null;
+//   let mostSalary = 0;
+//   for(const [name, salary] of Object.entries(salaries)) {
+//     if(salary > mostSalary) {
+//       mostName = name;
+//       mostSalary = salary;
+//     }
+//   }
+//   return mostName;
+// }
+// console.log(topSalary(salaries));
+
 
 
 

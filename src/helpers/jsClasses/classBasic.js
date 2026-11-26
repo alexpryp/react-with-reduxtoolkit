@@ -344,3 +344,42 @@ export class User {
     this._name = value;
   }
 }
+
+
+export function twoFuncOneObj() {
+  const obj = { variable: 'var' };
+
+  function A() { return obj };
+  function B() { return obj };
+
+  const a = new A();
+  const b = new B();
+
+  return a == b;
+}
+
+export function Calculator() {
+  this.a = 0;
+  this.b = 0;
+
+  this.read = function() {
+    this.a = +prompt('Enter A value:', '0');
+    this.b = +prompt('Enter B value:', '0');
+  }
+
+  this.sum = function () {
+    return this.a + this.b;
+  }
+
+  this.mul = function () {
+    return this.a * this.b;
+  }
+}
+
+export function Accumulator(startingValue) {
+  this.value = startingValue;
+
+  this.read = function () {
+    this.value += +prompt('Enter a new value: ', '0');
+  }
+}

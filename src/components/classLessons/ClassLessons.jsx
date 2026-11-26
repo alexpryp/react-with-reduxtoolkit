@@ -32,6 +32,8 @@ export default function ClassLessons() {
       <div>
         {/* <p>{`Accumulator value: ${accumulator.value}`}</p>*/}
       </div>
+      <p>{` Say Hi from userObj: ${userObj.sayHi()}`}</p>
+
     </>
   );
 }
